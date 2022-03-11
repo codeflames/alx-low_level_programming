@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- * Entry point into the program 
- * 
- * Prints whats in put and return 0 
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
