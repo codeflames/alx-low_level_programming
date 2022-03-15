@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
 * main - Print the word "Holberton"
@@ -8,12 +9,14 @@
 
 int main(void)
 {
-	int i;
-	char p[] = "_putchar";
 
-	for (i = 0; i < 9; i++)
+	char const *p = "_putchar";
+
+	char character;
+
+	for (character = *p; character != '\0'; character = *++p)
 		{
-		_putchar(p[i]);
+		_putchar(character);
 		}
 		_putchar('\n');
 	return (0);
