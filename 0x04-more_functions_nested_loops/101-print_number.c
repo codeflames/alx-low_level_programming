@@ -8,28 +8,21 @@
 */
 void print_number(int n)
 {
-	int copy, nth, size = 1, ones = n % 10;
-
-	n /= 10;
-	copy = n;
-	if (ones < 0)
+	if(n < 0)
 	{
-		ones *= -1, copy *= -1, n *= -1;
 		_putchar('-');
+		n = n * -1;
 	}
-	if (copy > 0)
+
+	if (n == 0)
 	{
-		while (copy / 10 != 0)
-		{
-			copy /= 10, size *= 10;
-		}
-		while (size > 0)
-		{
-			nth = n / size;
-			_putchar('0' + nth);
-			n -= nth * size;
-			size /= 10;
-		}
+		_putchar('0');
 	}
-	_putchar('0' + ones);
+	
+	if (n/10)
+	{
+		print_number(n/10);
+	}
+	
+	_putchar('0' + (n%10));
 }
