@@ -8,21 +8,29 @@
 */
 void print_number(int n)
 {
-	if(n < 0)
+	if (n < 0)
 	{
+
+		int first = n;
+
+    /* Remove last digit from number till only one digit is left */
+		while (first >= 10)
+		{
+			first = first / 10;
+		}
 		_putchar('-');
 		n = n * -1;
 	}
 
 	if (n == 0)
 	{
-		_putchar('0');
+		_putchar('0' + n);
 	}
-	
-	if (n/10)
+
+	if (n / 10)
 	{
-		print_number(n/10);
+		print_number(n / 10);
 	}
-	
-	_putchar('0' + (n%10));
+
+	_putchar('0' + (n % 10));
 }
