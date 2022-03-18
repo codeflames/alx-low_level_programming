@@ -10,14 +10,6 @@ void print_number(int n)
 {
 	if (n < 0)
 	{
-
-		int first = n;
-
-    /* Remove last digit from number till only one digit is left */
-		while (first >= 10)
-		{
-			first = first / 10;
-		}
 		_putchar('-');
 		n = n * -1;
 	}
